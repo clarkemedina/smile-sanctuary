@@ -81,18 +81,19 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
-              {/* Logo badge + tagline row */}
-              <div className="flex items-center gap-3 mb-5">
+
+              {/* Logo + name block — bigger to fill space */}
+              <div className="flex items-center gap-4 mb-6">
                 <img
                   src={sjLogo}
                   alt="SJ Summit Dental Logo"
-                  className="w-14 h-14 rounded-full object-cover flex-shrink-0 shadow-sm"
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover flex-shrink-0 shadow-md"
                 />
                 <div>
-                  <p className="text-primary font-semibold text-sm tracking-wide uppercase leading-tight">
+                  <p className="text-primary font-bold text-xl md:text-2xl tracking-wide uppercase leading-tight">
                     SJ Summit Dental
                   </p>
-                  <p className="text-muted-foreground text-xs italic leading-tight">
+                  <p className="text-muted-foreground text-sm md:text-base italic leading-snug mt-0.5">
                     Your smile shines because we care
                   </p>
                 </div>
