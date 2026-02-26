@@ -82,20 +82,19 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
 
-              {/* Logo + name block — bigger to fill space */}
+              {/* Logo + name block — stacked vertically, large */}
               <div className="flex flex-col items-start gap-2 mb-6">
-  <img
-    src={sjLogo}
-    alt="SJ Summit Dental Logo"
-    className="w-48 h-48 md:w-56 md:h-56 object-contain"
-  />
-  <p className="text-primary font-bold text-3xl md:text-4xl tracking-wide uppercase leading-tight">
-    SJ Summit Dental
-  </p>
-  <p className="text-muted-foreground text-lg md:text-xl italic leading-snug">
-    Your smile shines because we care
-  </p>
-</div>
+                <img
+                  src={sjLogo}
+                  alt="SJ Summit Dental Logo"
+                  className="w-32 h-32 md:w-56 md:h-56 object-contain"
+                />
+                <p className="text-primary font-bold text-3xl md:text-4xl tracking-wide uppercase leading-tight">
+                  SJ Summit Dental
+                </p>
+                <p className="text-muted-foreground text-lg md:text-xl italic leading-snug">
+                  Your smile shines because we care
+                </p>
               </div>
 
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6">
@@ -126,7 +125,6 @@ const Index = () => {
                   alt="Dr. Jackie Del Rosario and Dr. Gerimae — SJ Summit Dental"
                   className="rounded-2xl shadow-2xl w-full object-cover object-top aspect-[4/5] lg:aspect-[3/4]"
                 />
-                {/* Floating badge */}
                 <div className="absolute -bottom-4 -left-4 bg-card rounded-xl shadow-lg p-4 flex items-center gap-3">
                   <div className="bg-primary/10 rounded-full p-2">
                     <Star className="w-5 h-5 text-primary" />
@@ -155,7 +153,6 @@ const Index = () => {
               </p>
             </div>
           </FadeInSection>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pillars.map((pillar, i) => (
               <FadeInSection key={pillar.title} delay={i * 0.1}>
