@@ -79,7 +79,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden bg-secondary">
         <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             <FadeInSection>
 
               {/* Logo + name block — stacked vertically, large */}
