@@ -44,9 +44,9 @@ const Header = () => {
 
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-3">
-          <a href="tel:+14085551234" className="hidden sm:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
+          <a href="tel:+15628095988" className="hidden sm:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />
-            <span>(408) 555-1234</span>
+            <span>(562) 809-5988</span>
           </a>
           <Button variant="hero" size="sm" className="hidden sm:inline-flex" asChild>
             <Link to="/contact">Schedule Visit</Link>
