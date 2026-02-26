@@ -55,11 +55,11 @@ const Footer = () => {
             <h4 className="font-heading text-lg font-semibold mb-3">Office Hours</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li className="flex items-start gap-2">
-                <Clock className="w-4 h-4 mt-0.5 text-accent" />
+                <Clock className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" />
                 <div>
-                  <p>Mon – Fri: 9:00 AM – 6:00 PM</p>
-                  <p>Sat: 9:00 AM – 2:00 PM</p>
-                  <p>Sun: Closed</p>
+                  <p>Mon: Closed</p>
+                  <p>Tue – Fri: 9:00 AM – 5:00 PM</p>
+                  <p>Sat – Sun: 8:00 AM – 2:00 PM</p>
                 </div>
               </li>
             </ul>
