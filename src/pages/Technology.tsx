@@ -1,24 +1,24 @@
 import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Monitor, Scan, Armchair } from "lucide-react";
-import technologyRoom from "@/assets/technology-room.webp";
-import waitingRoom from "@/assets/waiting-room.webp";
+import xrayMachine from "@/assets/xray-edited.webp";
+import treatmentRoom from "@/assets/treatment-edited.webp";
 
 const techFeatures = [
   {
     icon: Scan,
-    title: "Digital X-Ray System",
-    desc: "Low-radiation digital imaging for fast, accurate diagnosis with minimal exposure.",
+    title: "Panoramic X-Ray System",
+    desc: "Advanced panoramic imaging for comprehensive diagnosis with minimal radiation exposure.",
   },
   {
     icon: Monitor,
-    title: "Panoramic Imaging",
-    desc: "Full-jaw panoramic X-rays for comprehensive treatment planning.",
+    title: "Digital Treatment Planning",
+    desc: "Chairside monitors for real-time imaging and patient education.",
   },
   {
     icon: Armchair,
-    title: "Modern Treatment Chairs",
-    desc: "Ergonomic, comfortable dental chairs designed for relaxed patient experiences.",
+    title: "Comfort-Focused Rooms",
+    desc: "Nature-themed treatment rooms with hand-painted murals to create a calming atmosphere.",
   },
 ];
 
@@ -45,9 +45,9 @@ const Technology = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
               <img
-                src={technologyRoom}
-                alt="Advanced dental technology at SJ Summit Dental"
-                className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
+                src={xrayMachine}
+                alt="Panoramic X-ray machine at SJ Summit Dental"
+                className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4] max-h-[500px]"
               />
             </FadeInSection>
             <div className="space-y-6">
@@ -78,7 +78,7 @@ const Technology = () => {
                 Comfortable Environment for <span className="text-primary">All Ages</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Our office is designed to feel welcoming from the moment you walk in. Natural light, calming colors, and a friendly team create an atmosphere where families feel at home.
+                Each treatment room features unique hand-painted murals — from serene waterfalls to ocean scenes — designed to help patients of all ages feel at ease during their visit.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We're proud of the warm, community-oriented space we've built — where every smile matters.
@@ -86,9 +86,9 @@ const Technology = () => {
             </FadeInSection>
             <FadeInSection delay={0.1}>
               <img
-                src={waitingRoom}
-                alt="Welcoming reception area"
-                className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
+                src={treatmentRoom}
+                alt="Treatment room with waterfall mural"
+                className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4] max-h-[500px]"
               />
             </FadeInSection>
           </div>

@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Shield, Heart, Users, ArrowRight, Star } from "lucide-react";
-import heroDoctors from "@/assets/hero-doctors.webp";
-import happyPatient from "@/assets/happy-patient.webp";
-import waitingRoom from "@/assets/waiting-room.webp";
+import doctorsPortrait from "@/assets/doctors-portrait.png";
+import receptionDesk from "@/assets/reception-edited.webp";
+import treatmentRoom from "@/assets/treatment-edited.webp";
 
 const pillars = [
   {
@@ -60,9 +60,9 @@ const Index = () => {
             <FadeInSection delay={0.15}>
               <div className="relative">
                 <img
-                  src={heroDoctors}
-                  alt="Dr. Jackie and Dr. Mae Mae — SJ Summit Dental"
-                  className="rounded-2xl shadow-2xl w-full object-cover aspect-[16/10]"
+                  src={doctorsPortrait}
+                  alt="Dr. Jackie Del Rosario and Dr. Gerimae — SJ Summit Dental"
+                  className="rounded-2xl shadow-2xl w-full object-cover object-top aspect-[4/5] lg:aspect-[3/4]"
                 />
                 {/* Floating badge */}
                 <div className="absolute -bottom-4 -left-4 bg-card rounded-xl shadow-lg p-4 flex items-center gap-3">
@@ -120,8 +120,8 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
               <img
-                src={waitingRoom}
-                alt="Comfortable waiting area at SJ Summit Dental"
+                src={receptionDesk}
+                alt="Reception area at SJ Summit Dental"
                 className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
               />
             </FadeInSection>
@@ -131,7 +131,7 @@ const Index = () => {
                 <span className="text-primary">All Ages</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                From our calming waiting area to our state-of-the-art treatment rooms, every detail is designed with your comfort in mind. We understand dental anxiety and go above and beyond to make your visit easy.
+                From our welcoming reception area to our nature-themed treatment rooms, every detail is designed with your comfort in mind. We understand dental anxiety and go above and beyond to make your visit easy.
               </p>
               <ul className="space-y-3 mb-8">
                 {["Walk-ins welcome", "Multilingual care: English, Español, Filipino", "Denti-Cal accepted", "Most insurance plans accepted"].map((item) => (
@@ -149,7 +149,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Patient Testimonial-style CTA */}
+      {/* CTA Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -160,7 +160,7 @@ const Index = () => {
               <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
                 Whether you're looking for a routine cleaning, cosmetic enhancements, or advanced restorative work — we're here to guide you with care and transparency.
               </p>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-8 italic">
                 "Comfort-focused care using modern techniques."
               </p>
               <div className="flex flex-wrap gap-4">
@@ -177,8 +177,8 @@ const Index = () => {
             </FadeInSection>
             <FadeInSection delay={0.1}>
               <img
-                src={happyPatient}
-                alt="Happy patient at SJ Summit Dental"
+                src={treatmentRoom}
+                alt="Treatment room with nature mural at SJ Summit Dental"
                 className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
               />
             </FadeInSection>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Award, GraduationCap, Heart, ArrowRight } from "lucide-react";
-import heroDoctors from "@/assets/hero-doctors.webp";
+import doctorsPortrait from "@/assets/doctors-portrait.png";
 
 const credentials = [
   "Doctor of Dental Surgery (DDS)",
@@ -27,7 +27,7 @@ const About = () => {
                 <span className="text-primary">Patient-Focused.</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                SJ Summit Dental was founded in 2009 by Dr. May Jacqueline Navoa-del Rosario with a simple philosophy: treat every patient like family. Today, alongside her daughter, they continue that legacy with modern techniques and genuine warmth.
+                SJ Summit Dental was founded in 2009 by Dr. May Jacqueline N. Del Rosario with a simple philosophy: treat every patient like family. Today, alongside her daughter Dr. Gerimae, they continue that legacy with modern techniques and genuine warmth.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Our practice blends clinical excellence with a comfort-first approach. We believe that the best dental care comes from building lasting relationships based on trust, transparency, and respect.
@@ -35,9 +35,9 @@ const About = () => {
             </FadeInSection>
             <FadeInSection delay={0.15}>
               <img
-                src={heroDoctors}
-                alt="Dr. Jackie and Dr. Mae Mae at SJ Summit Dental"
-                className="rounded-2xl shadow-2xl w-full object-cover aspect-[16/10]"
+                src={doctorsPortrait}
+                alt="Dr. Jackie Del Rosario and Dr. Gerimae at SJ Summit Dental"
+                className="rounded-2xl shadow-2xl w-full object-cover object-top aspect-[4/5]"
               />
             </FadeInSection>
           </div>
@@ -81,7 +81,7 @@ const About = () => {
               Credentials & Affiliations
             </h2>
             <p className="text-muted-foreground text-lg text-center mb-10">
-              Dr. May Jacqueline Navoa-del Rosario
+              Dr. May Jacqueline N. Del Rosario
             </p>
             <ul className="space-y-4">
               {credentials.map((c) => (

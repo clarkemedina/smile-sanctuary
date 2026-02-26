@@ -40,15 +40,15 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-background/70">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-accent" />
-                <span>(408) 555-1234</span>
+                <span>(562) 809-5988</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 text-accent" />
-                <span>info@sjsummitdental.com</span>
+                <span>sjsummitdental@yahoo.com</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 text-accent" />
-                <span>123 Summit Ave, San Jose, CA 95123</span>
+                <span>17808 S. Pioneer Blvd, #110<br />Artesia, CA 90701</span>
               </li>
             </ul>
           </div>
