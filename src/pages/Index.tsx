@@ -83,17 +83,17 @@ const Index = () => {
             <FadeInSection>
 
               {/* Logo + name block — bigger to fill space */}
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-5 mb-6">
                 <img
                   src={sjLogo}
                   alt="SJ Summit Dental Logo"
-                  className="w-35 h-35 md:w-39 md:h-24 object-contain flex-shrink-0"
+                  className="w-35 h-35 md:w-39 md:h-39 object-contain flex-shrink-0"
                 />
                 <div>
-                  <p className="text-primary font-bold text-xl md:text-2xl tracking-wide uppercase leading-tight">
+                  <p className="text-primary font-bold text-3xl md:text-4xl tracking-wide uppercase leading-tight">
                     SJ Summit Dental
                   </p>
-                  <p className="text-muted-foreground text-sm md:text-base italic leading-snug mt-0.5">
+                  <p className="text-muted-foreground text-base md:text-lg italic leading-snug mt-0.5">
                     Your Smile Shines Because We Care
                   </p>
                 </div>
