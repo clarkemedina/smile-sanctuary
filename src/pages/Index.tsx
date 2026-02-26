@@ -87,7 +87,7 @@ const Index = () => {
                 <img
                   src={sjLogo}
                   alt="SJ Summit Dental Logo"
-                  className="w-35 h-35 md:w-29 md:h-29 object-contain flex-shrink-0"
+                  className="w-35 h-35 md:w-29 md:h-25 object-contain flex-shrink-0"
                 />
                 <div>
                   <p className="text-primary font-bold text-3xl md:text-4xl tracking-wide uppercase leading-tight">
