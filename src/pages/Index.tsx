@@ -80,7 +80,7 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
-              <p className="text-primary font-medium text-sm tracking-wide uppercase mb-4">
+              <p className="text-primary font-medium text-lg tracking-wide uppercase mb-4">
                 SJ Summit Dental
               </p>
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
