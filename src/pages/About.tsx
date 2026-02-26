@@ -6,11 +6,13 @@ import { Award, GraduationCap, Heart, ArrowRight } from "lucide-react";
 import doctorsPortrait from "@/assets/doctors-portrait.png";
 
 const credentials = [
-  "Doctor of Dental Surgery (DDS)",
-  "American Dental Association (ADA)",
-  "California Dental Association (CDA)",
-  "Harbor Dental Society",
-  "Continuing education in implantology and cosmetic dentistry",
+  "Doctor of Dental Medicine (DMD) — University of the East, 1988",
+  "Dental Hygienist — Licensed in Florida, 2005",
+  "Licensed in California, 2007",
+  "American Dental Association (ADA) Member",
+  "California Dental Association (CDA) Member",
+  "Harbor Dental Society Member",
+  "Southern California Dental Society — Public Relations Officer",
 ];
 
 const About = () => {
@@ -27,10 +29,10 @@ const About = () => {
                 <span className="text-primary">Patient-Focused.</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                SJ Summit Dental was founded in 2009 by Dr. May Jacqueline N. Del Rosario with a simple philosophy: treat every patient like family. Today, alongside her daughter Dr. Gerimae, they continue that legacy with modern techniques and genuine warmth.
+                SJ Summit Dental was established in 2009 with a goal to make a difference in the field of dentistry. We provide quality dental service to everyone and consider our patients to be part of our family.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Our practice blends clinical excellence with a comfort-first approach. We believe that the best dental care comes from building lasting relationships based on trust, transparency, and respect.
+                We always value our patients' opinions and what is best for them. Our team provides the best smile because we care.
               </p>
             </FadeInSection>
             <FadeInSection delay={0.15}>
@@ -77,16 +79,19 @@ const About = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <FadeInSection>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
-              Credentials & Affiliations
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
+              Meet the Doctor
             </h2>
-            <p className="text-muted-foreground text-lg text-center mb-10">
-              Dr. May Jacqueline N. Del Rosario
+            <p className="text-muted-foreground text-lg text-center mb-2">
+              Dr. May Jacqueline Navoa-del Rosario, DMD
+            </p>
+            <p className="text-muted-foreground text-sm text-center mb-10">
+              Business Owner &amp; Founder
             </p>
             <ul className="space-y-4">
               {credentials.map((c) => (
                 <li key={c} className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                   <span className="text-foreground text-sm">{c}</span>
                 </li>
               ))}
