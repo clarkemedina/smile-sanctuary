@@ -4,6 +4,8 @@ import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Phone, MapPin, Clock, Mail, Send, CheckCircle } from "lucide-react";
 
+const FORMSPREE_URL = "https://formspree.io/f/mlgwzyba";
+
 const hours = [
   { day: "Monday", time: "Closed", closed: true },
   { day: "Tuesday", time: "9:00 AM – 5:00 PM", closed: false },
@@ -16,6 +18,8 @@ const hours = [
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -30,9 +34,28 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please call us directly at (562) 809-5988.");
+      }
+    } catch {
+      setError("Something went wrong. Please call us directly at (562) 809-5988.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -176,9 +199,19 @@ const Contact = () => {
                         />
                       </div>
 
-                      <Button type="submit" variant="hero" size="lg" className="w-full">
-                        Send Message
-                        <Send className="w-4 h-4 ml-2" />
+                      {error && (
+                        <p className="text-sm text-destructive">{error}</p>
+                      )}
+
+                      <Button
+                        type="submit"
+                        variant="hero"
+                        size="lg"
+                        className="w-full"
+                        disabled={loading}
+                      >
+                        {loading ? "Sending..." : "Send Message"}
+                        {!loading && <Send className="w-4 h-4 ml-2" />}
                       </Button>
 
                       <p className="text-xs text-muted-foreground text-center">
