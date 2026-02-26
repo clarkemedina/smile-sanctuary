@@ -93,7 +93,7 @@ const Index = () => {
                   SJ Summit Dental
                 </p>
                 <p className="text-muted-foreground text-lg md:text-xl italic leading-snug">
-                  Your smile shines because we care
+                  Your Smile Shines Because We Care
                 </p>
               </div>
 
