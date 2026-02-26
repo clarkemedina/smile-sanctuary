@@ -6,6 +6,7 @@ import { Shield, Heart, Users, ArrowRight, Star, ExternalLink } from "lucide-rea
 import doctorsPortrait from "@/assets/doctors-portrait.png";
 import receptionDesk from "@/assets/reception-edited.webp";
 import treatmentRoom from "@/assets/treatment-edited.webp";
+import sjLogo from "@/assets/sj-summit-logo.png";
 
 const pillars = [
   {
@@ -72,38 +73,6 @@ const StarRating = ({ count }: { count: number }) => (
   </div>
 );
 
-// SVG recreation of the SJ Summit Dental logo
-const SJLogo = () => (
-  <svg viewBox="0 0 100 100" className="w-full h-full" aria-label="SJ Summit Dental Logo">
-    {/* Outer circle */}
-    <circle cx="50" cy="50" r="48" fill="white" stroke="#3aafa9" strokeWidth="2.5" />
-    {/* Tooth shape */}
-    <path
-      d="M50 22 C42 22 36 27 34 34 C32 40 33 46 35 50 C37 55 38 62 39 68 C40 73 42 76 44 76 C46 76 47 73 48 68 L50 58 L52 68 C53 73 54 76 56 76 C58 76 60 73 61 68 C62 62 63 55 65 50 C67 46 68 40 66 34 C64 27 58 22 50 22Z"
-      fill="#3aafa9"
-      opacity="0.15"
-    />
-    <path
-      d="M50 24 C43 24 37 29 35 35 C33 41 34 47 36 51 C38 56 39 63 40 69 C41 74 43 77 45 77 C47 77 48 74 49 69 L50 60 L51 69 C52 74 53 77 55 77 C57 77 59 74 60 69 C61 63 62 56 64 51 C66 47 67 41 65 35 C63 29 57 24 50 24Z"
-      fill="none"
-      stroke="#3aafa9"
-      strokeWidth="2"
-    />
-    {/* Sun rays at top */}
-    <line x1="50" y1="10" x2="50" y2="15" stroke="#f4a261" strokeWidth="2" strokeLinecap="round" />
-    <line x1="58" y1="12" x2="56" y2="16" stroke="#f4a261" strokeWidth="2" strokeLinecap="round" />
-    <line x1="64" y1="18" x2="61" y2="21" stroke="#f4a261" strokeWidth="2" strokeLinecap="round" />
-    <line x1="42" y1="12" x2="44" y2="16" stroke="#f4a261" strokeWidth="2" strokeLinecap="round" />
-    <line x1="36" y1="18" x2="39" y2="21" stroke="#f4a261" strokeWidth="2" strokeLinecap="round" />
-    {/* Sun circle */}
-    <circle cx="50" cy="19" r="4" fill="#f4a261" />
-    {/* Text: SJ SUMMIT */}
-    <text x="50" y="87" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#3aafa9" fontFamily="serif" letterSpacing="1">SJ SUMMIT</text>
-    {/* Text: DENTAL */}
-    <text x="50" y="96" textAnchor="middle" fontSize="7.5" fill="#3aafa9" fontFamily="serif" letterSpacing="2">DENTAL</text>
-  </svg>
-);
-
 const Index = () => {
   return (
     <PageLayout>
@@ -114,9 +83,11 @@ const Index = () => {
             <FadeInSection>
               {/* Logo badge + tagline row */}
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-12 h-12 flex-shrink-0">
-                  <SJLogo />
-                </div>
+                <img
+                  src={sjLogo}
+                  alt="SJ Summit Dental Logo"
+                  className="w-14 h-14 rounded-full object-cover flex-shrink-0 shadow-sm"
+                />
                 <div>
                   <p className="text-primary font-semibold text-sm tracking-wide uppercase leading-tight">
                     SJ Summit Dental
