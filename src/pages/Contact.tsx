@@ -24,13 +24,14 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, wire this up to a form service like Formspree or EmailJS
     setSubmitted(true);
   };
 
@@ -71,14 +72,19 @@ const Contact = () => {
                     <Button
                       variant="hero"
                       className="mt-4"
-                      onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", email: "", service: "", message: "" }); }}
+                      onClick={() => {
+                        setSubmitted(false);
+                        setForm({ name: "", phone: "", email: "", service: "", message: "" });
+                      }}
                     >
                       Send Another Message
                     </Button>
                   </div>
                 ) : (
                   <>
-                    <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Request an Appointment</h2>
+                    <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                      Request an Appointment
+                    </h2>
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
@@ -143,7 +149,7 @@ const Contact = () => {
                           <option>Cleaning / Check-up</option>
                           <option>Teeth Whitening</option>
                           <option>Fillings / Composite Resin</option>
-                          <option>Crowns & Bridges</option>
+                          <option>Crowns &amp; Bridges</option>
                           <option>Root Canal Treatment</option>
                           <option>Dental Implants</option>
                           <option>Veneers</option>
@@ -177,7 +183,9 @@ const Contact = () => {
 
                       <p className="text-xs text-muted-foreground text-center">
                         Prefer to call? Reach us at{" "}
-                        <a href="tel:+15628095988" className="text-primary hover:underline">(562) 809-5988</a>
+                        <a href="tel:+15628095988" className="text-primary hover:underline">
+                          (562) 809-5988
+                        </a>
                       </p>
                     </form>
                   </>
@@ -187,11 +195,13 @@ const Contact = () => {
 
             {/* Info Panel */}
             <div className="space-y-8">
-              {/* Quick Contact */}
               <FadeInSection delay={0.1}>
                 <div className="bg-card rounded-2xl p-6 shadow-sm border border-border space-y-4">
                   <h3 className="font-heading text-xl font-semibold text-foreground">Get in Touch</h3>
-                  <a href="tel:+15628095988" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group">
+                  <a
+                    href="tel:+15628095988"
+                    className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
+                  >
                     <div className="bg-primary/10 rounded-xl w-10 h-10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Phone className="w-5 h-5 text-primary" />
                     </div>
@@ -200,7 +210,10 @@ const Contact = () => {
                       <p className="font-medium text-sm">(562) 809-5988</p>
                     </div>
                   </a>
-                  <a href="mailto:sjsummitdental@yahoo.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group">
+                  <a
+                    href="mailto:sjsummitdental@yahoo.com"
+                    className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
+                  >
                     <div className="bg-primary/10 rounded-xl w-10 h-10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
@@ -227,7 +240,6 @@ const Contact = () => {
                 </div>
               </FadeInSection>
 
-              {/* Hours */}
               <FadeInSection delay={0.15}>
                 <div className="bg-card rounded-2xl p-6 shadow-sm border border-border">
                   <div className="flex items-center gap-2 mb-4">
@@ -245,7 +257,11 @@ const Contact = () => {
                         >
                           <span className={`font-medium ${isToday ? "text-primary" : "text-foreground"}`}>
                             {h.day}
-                            {isToday && <span className="ml-2 text-xs bg-primary text-primary-foreground px-1.5 py-0.5 rounded-full">Today</span>}
+                            {isToday && (
+                              <span className="ml-2 text-xs bg-primary text-primary-foreground px-1.5 py-0.5 rounded-full">
+                                Today
+                              </span>
+                            )}
                           </span>
                           <span className={h.closed ? "text-muted-foreground" : "text-foreground"}>
                             {h.time}
@@ -255,22 +271,6 @@ const Contact = () => {
                     })}
                   </ul>
                   <p className="text-xs text-muted-foreground mt-4">Walk-ins welcome during office hours.</p>
-                </div>
-              </FadeInSection>
-
-              {/* Map embed */}
-              <FadeInSection delay={0.2}>
-                <div className="rounded-2xl overflow-hidden shadow-sm border border-border aspect-video">
-                  <iframe
-                    title="SJ Summit Dental Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.6!2d-118.0836!3d33.8614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2e1234567890%3A0x1234567890abcdef!2s17808%20S%20Pioneer%20Blvd%20%23110%2C%20Artesia%2C%20CA%2090701!5e0!3m2!1sen!2sus!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
                 </div>
               </FadeInSection>
             </div>
