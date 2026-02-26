@@ -87,14 +87,14 @@ const Index = () => {
                 <img
                   src={sjLogo}
                   alt="SJ Summit Dental Logo"
-                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover flex-shrink-0 shadow-md"
+                  className="w-40 h-40 md:w-44 md:h-44 rounded-full object-cover flex-shrink-0 shadow-md"
                 />
                 <div>
                   <p className="text-primary font-bold text-xl md:text-2xl tracking-wide uppercase leading-tight">
                     SJ Summit Dental
                   </p>
                   <p className="text-muted-foreground text-sm md:text-base italic leading-snug mt-0.5">
-                    Your smile shines because we care
+                    Your Smile Shines Because We Care
                   </p>
                 </div>
               </div>
