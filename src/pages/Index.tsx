@@ -36,31 +36,31 @@ const reviews = [
     name: "Tes G.",
     location: "Rancho Palos Verdes, CA",
     stars: 5,
-    text: "Dr. Jackie and her team are awesome! She's very personable and treats you like family. She would rather ensure your well being and quality work than anything else. If you're looking for a Dr. who will earn your trust and be transparent, look no further.",
+    text: "Dr. Jackie and her team are awesome! She's very personable and treats you like family. She would rather ensure your well being and quality work than anything else.",
   },
   {
     name: "Anna A.",
     location: "Los Angeles, CA",
     stars: 5,
-    text: "Dr. Jackie is very patient, takes her time with her patients and she is very accommodating with questions. If you're looking for a dentist that truly cares about her patients, come to Dr. Jackie — you will be in good hands!",
+    text: "Dr. Jackie is very patient, takes her time with her patients and she is very accommodating with questions. If you're looking for a dentist that truly cares, you will be in good hands!",
   },
   {
     name: "Maricel C.",
     location: "Artesia, CA",
     stars: 5,
-    text: "Highly recommended! I have been coming here for years. The clinic is very clean, bright and organized. Dr. Jackie is awesome — very accommodating and patient, consulting with me all the way to make sure I was completely happy.",
+    text: "Highly recommended! I have been coming here for years. The clinic is very clean, bright and organized. Dr. Jackie is awesome — very accommodating and patient.",
   },
   {
     name: "Brian",
     location: "Artesia, CA",
     stars: 5,
-    text: "My last dentist left me in pain for days. I stopped going for almost 6 years. I went to SJ Summit Dental and the staff was understanding and excellent in every way. I am very happy with my new dentist.",
+    text: "I stopped going to the dentist for almost 6 years. I went to SJ Summit Dental and the staff was understanding and excellent in every way. I am very happy with my new dentist.",
   },
   {
     name: "Rachelle A.",
     location: "Torrance, CA",
     stars: 5,
-    text: "I would have anxiety when I go to the dentist, but not this time around. Dr. Jackie took her time to make sure my fix was done properly without any pain. I was pleasantly surprised — it's much better than what I had before.",
+    text: "I would have anxiety when I go to the dentist, but not this time around. Dr. Jackie took her time to make sure my fix was done properly without any pain.",
   },
 ];
 
@@ -181,15 +181,7 @@ const Index = () => {
                 From our welcoming reception area to our nature-themed treatment rooms, every detail is designed with your comfort in mind. We understand dental anxiety and go above and beyond to make your visit easy.
               </p>
               <ul className="space-y-3 mb-8">
-                {[
-                  "Walk-ins welcome",
-                  "Multilingual care: English, Español, Filipino",
-                  "Denti-Cal accepted",
-                  "Most insurance plans accepted",
-                  "Free Wi-Fi",
-                  "Gender-neutral restrooms",
-                  "Accepts credit cards",
-                ].map((item) => (
+                {["Walk-ins welcome", "Multilingual care: English, Español, Filipino", "Denti-Cal accepted", "Most insurance plans accepted"].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-foreground">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                     <span className="text-sm">{item}</span>
@@ -210,7 +202,6 @@ const Index = () => {
           <FadeInSection>
             <div className="text-center max-w-2xl mx-auto mb-14">
               <div className="flex items-center justify-center gap-2 mb-3">
-                {/* Yelp wordmark color */}
                 <svg viewBox="0 0 24 24" className="w-6 h-6 fill-[#d32323]" aria-label="Yelp" role="img">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.75 5.4c.15-.675.9-1.05 1.5-.75l4.05 2.1c.6.3.75 1.05.375 1.575l-2.55 3.3c-.375.525-1.125.525-1.5.075l-1.5-2.1c-.15-.225-.225-.525-.15-.75l-.225-3.45zm-5.1 7.35c-.45-.525-.3-1.275.225-1.65l3.675-2.25c.525-.3 1.2-.075 1.5.45l.9 1.875c.225.45.075 1.05-.375 1.275l-3.75 1.875c-.675.3-1.5-.075-1.8-.75l-.375-.825zm1.65 5.625c-.675-.075-1.125-.75-.975-1.425l.975-4.125c.15-.675.825-1.05 1.5-.825l1.95.675c.525.15.825.675.75 1.2l-.6 3.9c-.15.9-1.05 1.425-1.875 1.2l-1.725-.6zm7.2 1.05c-.675.3-1.5-.075-1.725-.75l-1.125-3.825c-.15-.675.225-1.35.9-1.5l2.025-.45c.525-.15 1.05.15 1.275.675l1.125 3.225c.375.975-.15 2.025-1.125 2.4l-1.35.225zm3.75-4.5c-.3.6-1.05.825-1.65.525l-3.6-1.8c-.6-.3-.825-1.05-.525-1.65l.9-1.875c.3-.6 1.05-.825 1.65-.45l3.375 1.8c.9.45 1.125 1.65.6 2.4l-.75 1.05z"/>
                 </svg>
@@ -266,7 +257,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
