@@ -4,8 +4,9 @@ import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Award, GraduationCap, Heart, ArrowRight } from "lucide-react";
 import doctorsPortrait from "@/assets/doctors-portrait.png";
+import drGerimae from "@/assets/dr-gerimae.jpg";
 
-const credentials = [
+const jackieCredentials = [
   "Doctor of Dental Medicine (DMD) — University of the East, 1988",
   "Dental Hygienist — Licensed in Florida, 2005",
   "Licensed in California, 2007",
@@ -13,6 +14,11 @@ const credentials = [
   "California Dental Association (CDA) Member",
   "Harbor Dental Society Member",
   "Southern California Dental Society — Public Relations Officer",
+];
+
+const gerimaeCredentials = [
+  "Doctor of Dental Surgery (DDS) — University of the Pacific, Arthur A. Dugoni School of Dentistry, Class of 2023",
+  "White Coat Ceremony — August 21, 2021, Palace of Fine Arts Theatre, San Francisco",
 ];
 
 const About = () => {
@@ -75,31 +81,97 @@ const About = () => {
         </div>
       </section>
 
-      {/* Credentials */}
+      {/* Meet Our Doctors */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+        <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
-              Meet the Doctor
-            </h2>
-            <p className="text-muted-foreground text-lg text-center mb-2">
-              Dr. May Jacqueline Navoa-del Rosario, DMD
-            </p>
-            <p className="text-muted-foreground text-sm text-center mb-10">
-              Business Owner &amp; Founder
-            </p>
-            <ul className="space-y-4">
-              {credentials.map((c) => (
-                <li key={c} className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                  <span className="text-foreground text-sm">{c}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Meet Our Doctors
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                A mother-daughter team dedicated to your smile.
+              </p>
+            </div>
           </FadeInSection>
 
-          <FadeInSection delay={0.1}>
-            <div className="text-center mt-14">
+          <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+            {/* Dr. Jackie */}
+            <FadeInSection delay={0.05}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full flex flex-col">
+                <img
+                  src={doctorsPortrait}
+                  alt="Dr. May Jacqueline Navoa-del Rosario"
+                  className="w-full object-cover object-top aspect-[4/3]"
+                />
+                <div className="p-8 flex flex-col flex-1">
+                  <div className="bg-primary/10 rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+                    <Award className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-foreground mb-1">
+                    Dr. May Jacqueline Navoa-del Rosario
+                  </h3>
+                  <p className="text-primary text-xs font-semibold uppercase tracking-wide mb-4">
+                    Founder & Business Owner
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    With over 35 years of experience in dentistry, Dr. Jackie founded SJ Summit Dental in 2009 with a vision to provide compassionate, high-quality dental care for the whole family. Her patients are at the heart of everything she does.
+                  </p>
+                  <ul className="space-y-2 mt-auto">
+                    {jackieCredentials.map((c) => (
+                      <li key={c} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                        <span className="text-foreground text-sm">{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Dr. Gerimae */}
+            <FadeInSection delay={0.1}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full flex flex-col">
+                <img
+                  src={drGerimae}
+                  alt="Dr. Gerimae del Rosario"
+                  className="w-full object-cover object-top aspect-[4/3]"
+                />
+                <div className="p-8 flex flex-col flex-1">
+                  <div className="bg-primary/10 rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+                    <GraduationCap className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-foreground mb-1">
+                    Dr. Gerimae del Rosario
+                  </h3>
+                  <p className="text-primary text-xs font-semibold uppercase tracking-wide mb-4">
+                    Associate Dentist
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    Following in her mother's footsteps, Dr. Gerimae brings a fresh perspective and modern training to SJ Summit Dental. A graduate of one of California's most prestigious dental schools, she is passionate about providing gentle, patient-centered care.
+                  </p>
+                  <ul className="space-y-2 mt-auto">
+                    {gerimaeCredentials.map((c) => (
+                      <li key={c} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                        <span className="text-foreground text-sm">{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </FadeInSection>
+
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+          <FadeInSection>
+            <div className="text-center">
               <Button variant="hero" size="lg" asChild>
                 <Link to="/contact">
                   Schedule Your Visit
