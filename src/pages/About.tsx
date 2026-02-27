@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Award, GraduationCap, Heart, ArrowRight } from "lucide-react";
-import drGerimae from "@/assets/dr-gerimae.jpg";
-import drJackie from "@/assets/dr-jackie.jpg";
+import doctorsPortrait from "@/assets/doctors-portrait.png";
 
 const jackieCredentials = [
   "Doctor of Dental Medicine (DMD) — University of the East, 1988",
@@ -46,6 +45,14 @@ const About = () => {
                 We always value our patients' opinions and what is best for
                 them. Our team provides the best smile because we care.
               </p>
+            </FadeInSection>
+
+            <FadeInSection delay={0.15}>
+              <img
+                src={doctorsPortrait}
+                alt="Dr. Jackie Del Rosario and Dr. Gerimae at SJ Summit Dental"
+                className="rounded-2xl shadow-2xl w-full object-cover object-top aspect-[4/5]"
+              />
             </FadeInSection>
           </div>
         </div>
@@ -110,13 +117,7 @@ const About = () => {
             </h2>
 
             {/* Dr. Jackie */}
-            <div className="mb-20">
-              <img
-                src={drJackie}
-                alt="Dr. May Jacqueline Navoa-del Rosario"
-                className="w-full max-w-md mx-auto mb-6 aspect-[4/5] object-cover object-top rounded-2xl shadow-lg"
-              />
-
+            <div className="mb-16">
               <h3 className="font-heading text-2xl font-bold text-foreground text-center mb-2">
                 Dr. May Jacqueline Navoa-del Rosario, DMD
               </h3>
@@ -139,12 +140,6 @@ const About = () => {
 
             {/* Dr. Gerimae */}
             <div>
-              <img
-                src={drGerimae}
-                alt="Dr. Gerimae del Rosario"
-                className="w-full max-w-md mx-auto mb-6 aspect-[4/5] object-cover object-top rounded-2xl shadow-lg"
-              />
-
               <h3 className="font-heading text-2xl font-bold text-foreground text-center mb-2">
                 Dr. Gerimae del Rosario, DDS
               </h3>
