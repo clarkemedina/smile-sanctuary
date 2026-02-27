@@ -4,6 +4,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Award, GraduationCap, Heart, ArrowRight } from "lucide-react";
 import doctorsPortrait from "@/assets/doctors-portrait.png";
+import drGerimae from "@/assets/dr-gerimae.jpg";
 
 const jackieCredentials = [
   "Doctor of Dental Medicine (DMD) — University of the East, 1988",
@@ -140,6 +141,11 @@ const About = () => {
 
             {/* Dr. Gerimae */}
             <div>
+              <img
+                src={drGerimae}
+                alt="Dr. Gerimae del Rosario"
+                className="rounded-2xl shadow-lg w-full max-w-md mx-auto mb-6 object-cover"
+              />
               <h3 className="font-heading text-2xl font-bold text-foreground text-center mb-2">
                 Dr. Gerimae del Rosario, DDS
               </h3>
