@@ -4,7 +4,6 @@ import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { Award, GraduationCap, Heart, ArrowRight } from "lucide-react";
 import doctorsPortrait from "@/assets/doctors-portrait.png";
-import drGerimae from "@/assets/dr-gerimae.jpg";
 
 const jackieCredentials = [
   "Doctor of Dental Medicine (DMD) — University of the East, 1988",
@@ -29,18 +28,25 @@ const About = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
-              <p className="text-primary font-medium text-sm tracking-wide uppercase mb-4">About Us</p>
+              <p className="text-primary font-medium text-sm tracking-wide uppercase mb-4">
+                About Us
+              </p>
               <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Family-Owned.{" "}
                 <span className="text-primary">Patient-Focused.</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                SJ Summit Dental was established in 2009 with a goal to make a difference in the field of dentistry. We provide quality dental service to everyone and consider our patients to be part of our family.
+                SJ Summit Dental was established in 2009 with a goal to make a
+                difference in the field of dentistry. We provide quality dental
+                service to everyone and consider our patients to be part of our
+                family.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We always value our patients' opinions and what is best for them. Our team provides the best smile because we care.
+                We always value our patients' opinions and what is best for
+                them. Our team provides the best smile because we care.
               </p>
             </FadeInSection>
+
             <FadeInSection delay={0.15}>
               <img
                 src={doctorsPortrait}
@@ -57,23 +63,44 @@ const About = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">Our Values</h2>
-              <p className="text-muted-foreground text-lg">What guides every decision we make.</p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Our Values
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                What guides every decision we make.
+              </p>
             </div>
           </FadeInSection>
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Heart, title: "Compassion", desc: "Every patient deserves kindness and understanding. We listen first, treat second." },
-              { icon: Award, title: "Excellence", desc: "We invest in continuing education and advanced technology to deliver the highest standard of care." },
-              { icon: GraduationCap, title: "Education", desc: "We empower patients with knowledge so they can make informed decisions about their oral health." },
+              {
+                icon: Heart,
+                title: "Compassion",
+                desc: "Every patient deserves kindness and understanding. We listen first, treat second.",
+              },
+              {
+                icon: Award,
+                title: "Excellence",
+                desc: "We invest in continuing education and advanced technology to deliver the highest standard of care.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Education",
+                desc: "We empower patients with knowledge so they can make informed decisions about their oral health.",
+              },
             ].map((v, i) => (
               <FadeInSection key={v.title} delay={i * 0.1}>
                 <div className="bg-card rounded-2xl p-8 shadow-sm border border-border text-center">
                   <div className="bg-primary/10 rounded-xl w-12 h-12 flex items-center justify-center mx-auto mb-5">
                     <v.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-2">{v.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
+                    {v.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {v.desc}
+                  </p>
                 </div>
               </FadeInSection>
             ))}
@@ -83,87 +110,56 @@ const About = () => {
 
       {/* Meet Our Doctors */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <FadeInSection>
-            <div className="text-center max-w-2xl mx-auto mb-14">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Meet Our Doctors
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                A mother-daughter team dedicated to your smile.
-              </p>
-            </div>
-          </FadeInSection>
-
-          <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+              Meet Our Doctors
+            </h2>
 
             {/* Dr. Jackie */}
-            <FadeInSection delay={0.05}>
-              <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full flex flex-col">
-                <img
-                  src={doctorsPortrait}
-                  alt="Dr. May Jacqueline Navoa-del Rosario"
-                  className="w-full object-cover object-top aspect-[4/3]"
-                />
-                <div className="p-8 flex flex-col flex-1">
-                  <div className="bg-primary/10 rounded-xl w-10 h-10 flex items-center justify-center mb-4">
-                    <Award className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-heading text-xl font-bold text-foreground mb-1">
-                    Dr. May Jacqueline Navoa-del Rosario
-                  </h3>
-                  <p className="text-primary text-xs font-semibold uppercase tracking-wide mb-4">
-                    Founder & Business Owner
-                  </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                    With over 35 years of experience in dentistry, Dr. Jackie founded SJ Summit Dental in 2009 with a vision to provide compassionate, high-quality dental care for the whole family. Her patients are at the heart of everything she does.
-                  </p>
-                  <ul className="space-y-2 mt-auto">
-                    {jackieCredentials.map((c) => (
-                      <li key={c} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                        <span className="text-foreground text-sm">{c}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </FadeInSection>
+            <div className="mb-16">
+              <h3 className="font-heading text-2xl font-bold text-foreground text-center mb-2">
+                Dr. May Jacqueline Navoa-del Rosario, DMD
+              </h3>
+              <p className="text-muted-foreground text-sm text-center mb-8">
+                Founder & Business Owner
+              </p>
+
+              <ul className="space-y-4">
+                {jackieCredentials.map((c) => (
+                  <li
+                    key={c}
+                    className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                    <span className="text-foreground text-sm">{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Dr. Gerimae */}
-            <FadeInSection delay={0.1}>
-              <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full flex flex-col">
-                <img
-                  src={drGerimae}
-                  alt="Dr. Gerimae del Rosario"
-                  className="w-full object-cover object-top aspect-[4/3]"
-                />
-                <div className="p-8 flex flex-col flex-1">
-                  <div className="bg-primary/10 rounded-xl w-10 h-10 flex items-center justify-center mb-4">
-                    <GraduationCap className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-heading text-xl font-bold text-foreground mb-1">
-                    Dr. Gerimae del Rosario
-                  </h3>
-                  <p className="text-primary text-xs font-semibold uppercase tracking-wide mb-4">
-                    Associate Dentist
-                  </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                    Following in her mother's footsteps, Dr. Gerimae brings a fresh perspective and modern training to SJ Summit Dental. A graduate of one of California's most prestigious dental schools, she is passionate about providing gentle, patient-centered care.
-                  </p>
-                  <ul className="space-y-2 mt-auto">
-                    {gerimaeCredentials.map((c) => (
-                      <li key={c} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                        <span className="text-foreground text-sm">{c}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </FadeInSection>
+            <div>
+              <h3 className="font-heading text-2xl font-bold text-foreground text-center mb-2">
+                Dr. Gerimae del Rosario, DDS
+              </h3>
+              <p className="text-muted-foreground text-sm text-center mb-8">
+                Associate Dentist
+              </p>
 
-          </div>
+              <ul className="space-y-4">
+                {gerimaeCredentials.map((c) => (
+                  <li
+                    key={c}
+                    className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                    <span className="text-foreground text-sm">{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </FadeInSection>
         </div>
       </section>
 
