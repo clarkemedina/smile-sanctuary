@@ -17,12 +17,12 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <div className="container mx-auto flex items-center justify-between h-[72px] px-4 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <span className="font-heading text-xl font-bold text-primary">SJ Summit</span>
-          <span className="font-heading text-xl font-medium text-foreground">Dental</span>
+        <Link to="/" className="flex items-center gap-1.5">
+          <span className="font-heading text-xl font-bold text-foreground tracking-tight">SJ Summit</span>
+          <span className="font-heading text-xl font-normal text-muted-foreground">Dental</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -33,8 +33,8 @@ const Header = () => {
               to={item.path}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                 location.pathname === item.path
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {item.label}
@@ -43,13 +43,13 @@ const Header = () => {
         </nav>
 
         {/* CTA + Mobile Toggle */}
-        <div className="flex items-center gap-3">
-          <a href="tel:+15628095988" className="hidden sm:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
-            <Phone className="w-4 h-4" />
+        <div className="flex items-center gap-4">
+          <a href="tel:+15628095988" className="hidden sm:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Phone className="w-3.5 h-3.5" />
             <span>(562) 809-5988</span>
           </a>
-          <Button variant="hero" size="sm" className="hidden sm:inline-flex" asChild>
-            <Link to="/contact">Schedule Visit</Link>
+          <Button variant="hero" size="sm" asChild>
+            <Link to="/contact" className="hidden sm:inline-flex">Schedule Visit</Link>
           </Button>
           <button
             className="lg:hidden p-2 text-foreground"
@@ -63,7 +63,7 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-border bg-card px-4 pb-4">
+        <div className="lg:hidden border-t border-border bg-background px-4 pb-4">
           <nav className="flex flex-col gap-1 pt-2">
             {navItems.map((item) => (
               <Link
@@ -72,7 +72,7 @@ const Header = () => {
                 onClick={() => setMobileOpen(false)}
                 className={`px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === item.path
-                    ? "text-primary bg-primary/10"
+                    ? "text-foreground bg-secondary"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 }`}
               >

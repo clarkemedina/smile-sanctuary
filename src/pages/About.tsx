@@ -2,9 +2,24 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
-import { Award, GraduationCap, Heart, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import doctorsPortrait from "@/assets/doctors-portrait.png";
 import drGerimae from "@/assets/dr-gerimae.jpg";
+
+const values = [
+  {
+    title: "Compassion",
+    desc: "Every patient deserves kindness and understanding. We listen first, treat second.",
+  },
+  {
+    title: "Excellence",
+    desc: "We invest in continuing education and advanced technology to deliver the highest standard of care.",
+  },
+  {
+    title: "Transparency",
+    desc: "We empower patients with knowledge so they can make informed decisions about their health.",
+  },
+];
 
 const jackieCredentials = [
   "Doctor of Dental Medicine (DMD) — University of the East, 1988",
@@ -25,34 +40,30 @@ const About = () => {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="bg-secondary py-16 lg:py-24">
+      <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInSection>
-              <p className="text-primary font-medium text-sm tracking-wide uppercase mb-4">
-                About Us
-              </p>
-              <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <p className="text-accent font-medium text-sm tracking-widest uppercase mb-6">About Us</p>
+              <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-8 leading-[1.1]">
                 Family-Owned.{" "}
-                <span className="text-primary">Patient-Focused.</span>
+                <span className="italic font-normal">Patient-Focused.</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                SJ Summit Dental was established in 2009 with a goal to make a
-                difference in the field of dentistry. We provide quality dental
-                service to everyone and consider our patients to be part of our
-                family.
+                SJ Summit Dental was established in 2009 with a simple belief: every patient
+                deserves quality care in a space that feels warm, honest, and welcoming.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We always value our patients' opinions and what is best for
-                them. Our team provides the best smile because we care.
+                We always value our patients' opinions and what is best for them.
+                Our team provides the best smile — because we care.
               </p>
             </FadeInSection>
 
             <FadeInSection delay={0.15}>
               <img
                 src={doctorsPortrait}
-                alt="Dr. Jackie Del Rosario and Dr. Gerimae at SJ Summit Dental"
-                className="rounded-2xl shadow-2xl w-full object-cover object-top aspect-[4/5]"
+                alt="Dr. Jackie and Dr. Gerimae at SJ Summit Dental"
+                className="rounded-lg shadow-2xl w-full object-cover object-top aspect-[4/5]"
               />
             </FadeInSection>
           </div>
@@ -60,11 +71,11 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20">
+      <section className="py-24 lg:py-32 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
-            <div className="text-center max-w-2xl mx-auto mb-14">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <div className="text-center max-w-xl mx-auto mb-16">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-5">
                 Our Values
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -73,30 +84,12 @@ const About = () => {
             </div>
           </FadeInSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Heart,
-                title: "Compassion",
-                desc: "Every patient deserves kindness and understanding. We listen first, treat second.",
-              },
-              {
-                icon: Award,
-                title: "Excellence",
-                desc: "We invest in continuing education and advanced technology to deliver the highest standard of care.",
-              },
-              {
-                icon: GraduationCap,
-                title: "Education",
-                desc: "We empower patients with knowledge so they can make informed decisions about their oral health.",
-              },
-            ].map((v, i) => (
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {values.map((v, i) => (
               <FadeInSection key={v.title} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-8 shadow-sm border border-border text-center">
-                  <div className="bg-primary/10 rounded-xl w-12 h-12 flex items-center justify-center mx-auto mb-5">
-                    <v.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
+                <div className="text-center">
+                  <div className="w-8 h-0.5 bg-accent mx-auto mb-6" />
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
                     {v.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -109,30 +102,29 @@ const About = () => {
         </div>
       </section>
 
-      {/* Meet Our Doctors */}
-      <section className="py-20 bg-secondary">
+      {/* Doctors */}
+      <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <FadeInSection>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-16 text-center">
               Meet Our Doctors
             </h2>
 
             {/* Dr. Jackie */}
-            <div className="mb-16">
+            <div className="mb-20">
               <h3 className="font-heading text-2xl font-bold text-foreground text-center mb-2">
                 Dr. May Jacqueline Navoa-del Rosario, DMD
               </h3>
               <p className="text-muted-foreground text-sm text-center mb-8">
                 Founder & Business Owner
               </p>
-
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {jackieCredentials.map((c) => (
                   <li
                     key={c}
-                    className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border"
+                    className="flex items-center gap-3 bg-secondary rounded-lg p-4"
                   >
-                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                     <span className="text-foreground text-sm">{c}</span>
                   </li>
                 ))}
@@ -144,7 +136,7 @@ const About = () => {
               <img
                 src={drGerimae}
                 alt="Dr. Gerimae del Rosario"
-                className="rounded-2xl shadow-lg w-full max-w-md mx-auto mb-6 object-cover"
+                className="rounded-lg shadow-lg w-full max-w-md mx-auto mb-8 object-cover"
               />
               <h3 className="font-heading text-2xl font-bold text-foreground text-center mb-2">
                 Dr. Gerimae del Rosario, DDS
@@ -152,14 +144,13 @@ const About = () => {
               <p className="text-muted-foreground text-sm text-center mb-8">
                 Associate Dentist
               </p>
-
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {gerimaeCredentials.map((c) => (
                   <li
                     key={c}
-                    className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border"
+                    className="flex items-center gap-3 bg-secondary rounded-lg p-4"
                   >
-                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                     <span className="text-foreground text-sm">{c}</span>
                   </li>
                 ))}
@@ -170,17 +161,18 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+      <section className="py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8 text-center">
           <FadeInSection>
-            <div className="text-center">
-              <Button variant="hero" size="lg" asChild>
-                <Link to="/contact">
-                  Schedule Your Visit
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </Button>
-            </div>
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
+              We're here when you're ready.
+            </h2>
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact">
+                Schedule Your Visit
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
+            </Button>
           </FadeInSection>
         </div>
       </section>
