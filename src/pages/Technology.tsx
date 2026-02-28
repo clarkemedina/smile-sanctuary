@@ -25,12 +25,13 @@ const techFeatures = [
 const Technology = () => {
   return (
     <PageLayout>
-      <section className="bg-secondary py-16 lg:py-24">
+      <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl">
           <FadeInSection>
-            <p className="text-primary font-medium text-sm tracking-wide uppercase mb-4">Our Office</p>
+            <p className="text-accent font-medium text-sm tracking-widest uppercase mb-6">Our Office</p>
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Technology & Comfort
+              Technology &{" "}
+              <span className="italic font-normal">Comfort</span>
             </h1>
             <p className="text-muted-foreground text-lg">
               Advanced equipment meets a welcoming atmosphere — because great care deserves a great environment.
@@ -39,23 +40,23 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Tech Features */}
-      <section className="py-20">
+      <section className="pb-24">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInSection>
               <img
                 src={xrayMachine}
                 alt="Panoramic X-ray machine at SJ Summit Dental"
-                className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4] max-h-[500px]"
+                className="rounded-lg shadow-lg w-full object-cover aspect-[3/4] max-h-[500px]"
+                loading="lazy"
               />
             </FadeInSection>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {techFeatures.map((f, i) => (
                 <FadeInSection key={f.title} delay={i * 0.1}>
                   <div className="flex gap-4">
-                    <div className="bg-primary/10 rounded-xl w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <f.icon className="w-6 h-6 text-primary" />
+                    <div className="bg-accent/10 rounded-md w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <f.icon className="w-5 h-5 text-accent" />
                     </div>
                     <div>
                       <h3 className="font-heading text-lg font-semibold text-foreground mb-1">{f.title}</h3>
@@ -69,16 +70,16 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Comfort */}
-      <section className="py-20 bg-secondary">
+      <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInSection>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Comfortable Environment for <span className="text-primary">All Ages</span>
+                Designed for{" "}
+                <span className="italic font-normal">All Ages</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Each treatment room features unique hand-painted murals — from serene waterfalls to ocean scenes — designed to help patients of all ages feel at ease during their visit.
+                Each treatment room features unique hand-painted murals — from serene waterfalls to ocean scenes — designed to help patients of all ages feel at ease.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We're proud of the warm, community-oriented space we've built — where every smile matters.
@@ -88,7 +89,8 @@ const Technology = () => {
               <img
                 src={treatmentRoom}
                 alt="Treatment room with waterfall mural"
-                className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4] max-h-[500px]"
+                className="rounded-lg shadow-lg w-full object-cover aspect-[3/4] max-h-[500px]"
+                loading="lazy"
               />
             </FadeInSection>
           </div>
