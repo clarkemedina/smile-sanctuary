@@ -3,16 +3,17 @@ import { Phone, MapPin, Clock, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <h3 className="font-heading text-xl font-bold mb-3">SJ Summit Dental</h3>
-            <p className="text-background/70 text-sm leading-relaxed">
-              Your Smile Shines Because We Care. Serving our community with gentle, trusted dental care since 2009.
+            <p className="text-primary-foreground/60 text-sm leading-relaxed">
+              Modern care. Thoughtful approach. Serving Artesia with gentle, trusted dental care since 2009.
             </p>
           </div>
+
           {/* Quick Links */}
           <div>
             <h4 className="font-heading text-lg font-semibold mb-3">Quick Links</h4>
@@ -20,22 +21,23 @@ const Footer = () => {
               {[
                 { label: "About Us", path: "/about" },
                 { label: "Services", path: "/services" },
-                { label: "Smile Gallery", path: "/gallery" },
-                { label: "Insurance & Payment", path: "/insurance" },
+                { label: "Gallery", path: "/gallery" },
+                { label: "Insurance", path: "/insurance" },
                 { label: "Technology", path: "/technology" },
               ].map((l) => (
                 <li key={l.path}>
-                  <Link to={l.path} className="text-background/70 hover:text-accent transition-colors">
+                  <Link to={l.path} className="text-primary-foreground/60 hover:text-accent transition-colors">
                     {l.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
           {/* Contact */}
           <div>
             <h4 className="font-heading text-lg font-semibold mb-3">Contact</h4>
-            <ul className="space-y-3 text-sm text-background/70">
+            <ul className="space-y-3 text-sm text-primary-foreground/60">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-accent" />
                 <span>(562) 809-5988</span>
@@ -50,10 +52,11 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
           {/* Hours */}
           <div>
             <h4 className="font-heading text-lg font-semibold mb-3">Office Hours</h4>
-            <ul className="space-y-2 text-sm text-background/70">
+            <ul className="space-y-2 text-sm text-primary-foreground/60">
               <li className="flex items-start gap-2">
                 <Clock className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" />
                 <div>
@@ -65,7 +68,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-background/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-background/50">
+
+        <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/40">
           <p>© {new Date().getFullYear()} SJ Summit Dental. All rights reserved.</p>
           <p>English · Español · Filipino</p>
         </div>
