@@ -21,8 +21,8 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between h-[72px] px-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-1.5">
-          <span className="font-heading text-xl font-bold text-foreground tracking-tight">SJ Summit</span>
-          <span className="font-heading text-xl font-normal text-muted-foreground">Dental</span>
+          <span className="font-heading text-xl font-bold text-primary tracking-tight">SJ Summit</span>
+          <span className="font-heading text-xl font-normal text-foreground">Dental</span>
         </Link>
 
         {/* Desktop Nav */}

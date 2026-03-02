@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/layout/PageLayout";
 import FadeInSection from "@/components/shared/FadeInSection";
 import { ArrowRight, Star, ExternalLink } from "lucide-react";
+import sjSummitLogo from "@/assets/sj-summit-logo.png";
 import doctorsPortrait from "@/assets/doctors-portrait.png";
 import receptionDesk from "@/assets/reception-edited.webp";
 import treatmentRoom from "@/assets/treatment-edited.webp";
@@ -34,10 +35,10 @@ const reviews = [
   },
 ];
 
-const StarRating = ({ count }: { count: number }) => (
+const StarRating = ({ count, color = "text-red-500 fill-red-500" }: { count: number; color?: string }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: count }).map((_, i) => (
-      <Star key={i} className="w-3.5 h-3.5 fill-accent text-accent" />
+      <Star key={i} className={`w-3.5 h-3.5 ${color}`} />
     ))}
   </div>
 );
@@ -50,16 +51,26 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInSection>
-              <p className="text-accent font-medium text-sm tracking-widest uppercase mb-6">
-                Artesia, California · Since 2009
+              <img
+                src={sjSummitLogo}
+                alt="SJ Summit Dental logo"
+                className="w-32 h-32 mb-6"
+              />
+              <h2 className="text-primary font-heading text-2xl font-bold tracking-wide mb-1">
+                SJ SUMMIT DENTAL
+              </h2>
+              <p className="text-muted-foreground italic mb-6">
+                Your Smile Shines Because We Care
               </p>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
-                Your Comfort{" "}
-                <span className="italic font-normal">Comes First</span>
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-4">
+                Modern Dentistry.
+              </h1>
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.1] mb-8">
+                Family Care.
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-md">
-                Modern care. Thoughtful approach. A family practice built on trust,
-                transparency, and genuine warmth.
+                Serving our community since 2009 with gentle, trusted
+                dental care. Your comfort is our priority.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="lg" asChild>
@@ -69,7 +80,7 @@ const Index = () => {
                   </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/about">Meet Our Team</Link>
+                  <Link to="/about">Meet Our Doctors</Link>
                 </Button>
               </div>
             </FadeInSection>
@@ -175,6 +186,7 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="text-center max-w-xl mx-auto mb-16">
+              <p className="text-red-500 font-medium text-sm tracking-widest uppercase mb-2">Yelp Reviews</p>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-5">
                 What Our Patients Say
               </h2>
@@ -210,9 +222,9 @@ const Index = () => {
                 href="https://www.yelp.com/biz/sj-summit-dental-artesia-3"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary border-2 border-primary rounded-md px-6 py-2.5 hover:bg-primary hover:text-primary-foreground transition-colors"
               >
-                Read all reviews on Yelp
+                Read All Reviews on Yelp
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
