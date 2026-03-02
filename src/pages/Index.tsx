@@ -11,27 +11,39 @@ import treatmentRoom from "@/assets/treatment-edited.webp";
 const reviews = [
   {
     name: "Jayson B.",
-    location: "Artesia, CA",
+    location: "Artesia, CA · via Yelp",
     stars: 5,
-    text: "I've been coming here since 2009. I love Dra Jackie. She is genuine to her patients. She recommends what's best for you and not for her pocket.",
+    text: "I've been coming here since 2009. I love Dra Jackie. She is genuine to her patients. She recommends what's best for you and not for her pocket. Highly recommended!",
   },
   {
     name: "Tes G.",
-    location: "Rancho Palos Verdes, CA",
+    location: "Rancho Palos Verdes, CA · via Yelp",
     stars: 5,
     text: "Dr. Jackie and her team are awesome! She's very personable and treats you like family. She would rather ensure your well being and quality work than anything else.",
   },
   {
     name: "Anna A.",
-    location: "Los Angeles, CA",
+    location: "Los Angeles, CA · via Yelp",
     stars: 5,
     text: "Dr. Jackie is very patient, takes her time with her patients and she is very accommodating with questions. If you're looking for a dentist that truly cares, you will be in good hands!",
   },
   {
-    name: "Brian",
-    location: "Artesia, CA",
+    name: "Maricel C.",
+    location: "Artesia, CA · via Yelp",
     stars: 5,
-    text: "I stopped going to the dentist for almost 6 years. I went to SJ Summit Dental and the staff was understanding and excellent in every way.",
+    text: "Highly recommended! I have been coming here for years. The clinic is very clean, bright and organized. Dr. Jackie is awesome — very accommodating and patient.",
+  },
+  {
+    name: "Brian",
+    location: "Artesia, CA · via Yelp",
+    stars: 5,
+    text: "I stopped going to the dentist for almost 6 years. I went to SJ Summit Dental and the staff was understanding and excellent in every way. I am very happy with my new dentist.",
+  },
+  {
+    name: "Rachelle A.",
+    location: "Torrance, CA · via Yelp",
+    stars: 5,
+    text: "I would have anxiety when I go to the dentist, but not this time around. Dr. Jackie took her time to make sure my fix was done properly without any pain.",
   },
 ];
 
@@ -186,7 +198,7 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <FadeInSection>
             <div className="text-center max-w-xl mx-auto mb-16">
-              <p className="text-red-500 font-medium text-sm tracking-widest uppercase mb-2">Yelp Reviews</p>
+              <p className="text-red-600 font-medium text-sm tracking-widest uppercase mb-2">Yelp Reviews</p>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-5">
                 What Our Patients Say
               </h2>
@@ -194,22 +206,21 @@ const Index = () => {
                 <StarRating count={5} />
                 <span className="text-muted-foreground text-sm">45+ reviews on Yelp</span>
               </div>
+              <p className="text-muted-foreground">Real words from real patients who've trusted us with their smiles.</p>
             </div>
           </FadeInSection>
 
-          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
             {reviews.map((review, i) => (
               <FadeInSection key={review.name} delay={i * 0.07}>
-                <div className="bg-card rounded-lg p-6 shadow-sm border border-border flex flex-col gap-4 h-full">
-                  <p className="text-foreground text-sm leading-relaxed flex-1 italic">
+                <div className="bg-card rounded-lg p-6 border border-border flex flex-col gap-4 h-full">
+                  <StarRating count={review.stars} />
+                  <p className="text-foreground text-sm leading-relaxed flex-1">
                     "{review.text}"
                   </p>
-                  <div className="flex items-center justify-between pt-3 border-t border-border">
-                    <div>
-                      <p className="font-medium text-sm text-foreground">{review.name}</p>
-                      <p className="text-xs text-muted-foreground">{review.location}</p>
-                    </div>
-                    <StarRating count={review.stars} />
+                  <div className="pt-3 border-t border-border">
+                    <p className="font-medium text-sm text-foreground">{review.name}</p>
+                    <p className="text-xs text-red-600">{review.location}</p>
                   </div>
                 </div>
               </FadeInSection>
@@ -222,7 +233,7 @@ const Index = () => {
                 href="https://www.yelp.com/biz/sj-summit-dental-artesia-3"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-primary border-2 border-primary rounded-md px-6 py-2.5 hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-red-600 border-2 border-red-600 rounded-full px-6 py-2.5 hover:bg-red-600 hover:text-white transition-colors"
               >
                 Read All Reviews on Yelp
                 <ExternalLink className="w-3.5 h-3.5" />
