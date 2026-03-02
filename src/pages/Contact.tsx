@@ -74,10 +74,13 @@ const Contact = () => {
     }
   };
 
+  const inputClasses =
+    "w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition";
+
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="bg-secondary py-16 lg:py-24">
+      <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl">
           <FadeInSection>
             <p className="text-primary font-medium text-sm tracking-wide uppercase mb-4">
@@ -93,8 +96,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20">
+      <section className="pb-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
@@ -136,8 +138,8 @@ const Contact = () => {
 
                 {submitted ? (
                   <div className="flex flex-col items-center justify-center text-center py-12 gap-4">
-                    <div className="bg-primary/10 rounded-full p-4">
-                      <CheckCircle className="w-10 h-10 text-primary" />
+                    <div className="bg-accent/10 rounded-full p-4">
+                      <CheckCircle className="w-10 h-10 text-accent" />
                     </div>
                     <h2 className="font-heading text-2xl font-bold text-foreground">
                       Message Sent!
@@ -153,6 +155,7 @@ const Contact = () => {
                     </h2>
 
                     <form onSubmit={handleSubmit} className="space-y-5">
+
                       <div className="grid sm:grid-cols-2 gap-5">
                         <input
                           name="name"
@@ -314,6 +317,7 @@ const Contact = () => {
               </FadeInSection>
 
             </div>
+
           </div>
         </div>
       </section>

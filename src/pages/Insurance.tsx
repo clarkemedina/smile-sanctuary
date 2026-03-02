@@ -38,12 +38,13 @@ const faqs = [
 const Insurance = () => {
   return (
     <PageLayout>
-      <section className="bg-secondary py-16 lg:py-24">
+      <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl">
           <FadeInSection>
-            <p className="text-primary font-medium text-sm tracking-wide uppercase mb-4">Insurance & Payment</p>
+            <p className="text-accent font-medium text-sm tracking-widest uppercase mb-6">Insurance & Payment</p>
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Clear, Honest Pricing.
+              Clear, Honest{" "}
+              <span className="italic font-normal">Pricing</span>
             </h1>
             <p className="text-muted-foreground text-lg">
               We believe in transparency. No surprises — just straightforward, honest dental care.
@@ -52,8 +53,7 @@ const Insurance = () => {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-20">
+      <section className="pb-24">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <FadeInSection>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
@@ -61,8 +61,8 @@ const Insurance = () => {
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {benefits.map((b) => (
-                <div key={b} className="flex items-center gap-3 bg-card rounded-xl p-4 shadow-sm border border-border">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <div key={b} className="flex items-center gap-3 bg-card rounded-lg p-4 shadow-sm border border-border">
+                  <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
                   <span className="text-foreground text-sm">{b}</span>
                 </div>
               ))}
@@ -71,8 +71,7 @@ const Insurance = () => {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-secondary">
+      <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <FadeInSection>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
@@ -83,7 +82,7 @@ const Insurance = () => {
                 <AccordionItem
                   key={i}
                   value={`faq-${i}`}
-                  className="bg-card rounded-xl border border-border px-6 shadow-sm"
+                  className="bg-card rounded-lg border border-border px-6 shadow-sm"
                 >
                   <AccordionTrigger className="text-foreground text-sm font-medium hover:no-underline py-4">
                     {faq.q}
