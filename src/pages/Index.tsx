@@ -87,9 +87,13 @@ const Index = () => {
                 Family Care.
               </h1>
 
-              <p className="text-muted-foreground text-xl leading-relaxed mb-12 max-w-lg">
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-lg">
                 Serving our community since 2009 with gentle, trusted dental care.
                 Your comfort is our priority.
+              </p>
+
+              <p className="text-muted-foreground text-base leading-relaxed mb-10 max-w-xl">
+                SJ Summit Dental is a modern family dentist serving Artesia, CA and surrounding communities including Cerritos, Norwalk, and Lakewood
               </p>
 
               <div className="flex flex-wrap gap-5">
