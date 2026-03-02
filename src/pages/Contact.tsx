@@ -76,6 +76,7 @@ const Contact = () => {
 
   return (
     <PageLayout>
+      {/* Hero */}
       <section className="bg-secondary py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl">
           <FadeInSection>
@@ -92,16 +93,17 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Main Content */}
       <section className="py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-            {/* Contact Form */}
+            {/* LEFT: Form + Text Option */}
             <FadeInSection>
-              <div className="bg-card rounded-2xl p-8 shadow-sm border border-border transition-all duration-300">
+              <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
 
                 {/* TEXT OPTION */}
-                <div className="mb-10 text-center animate-in fade-in slide-in-from-bottom-2 duration-500">
+                <div className="mb-10 text-center">
                   <div className="flex justify-center mb-3 group">
                     <div className="bg-primary/10 rounded-full p-3 transition-transform duration-300 group-hover:scale-105">
                       <MessageSquare className="w-6 h-6 text-primary" />
@@ -129,11 +131,11 @@ const Contact = () => {
                     Please do not send sensitive medical information via text.
                   </p>
 
-                  <div className="border-t border-border my-10 transition-opacity duration-500 opacity-80" />
+                  <div className="border-t border-border my-10" />
                 </div>
 
                 {submitted ? (
-                  <div className="flex flex-col items-center justify-center text-center py-12 gap-4 animate-in fade-in duration-500">
+                  <div className="flex flex-col items-center justify-center text-center py-12 gap-4">
                     <div className="bg-primary/10 rounded-full p-4">
                       <CheckCircle className="w-10 h-10 text-primary" />
                     </div>
@@ -159,9 +161,7 @@ const Contact = () => {
                           value={form.name}
                           onChange={handleChange}
                           placeholder="Full Name *"
-                          className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm
-                                     transition-all duration-200
-                                     focus:outline-none focus:ring-2 focus:ring-ring focus:-translate-y-0.5"
+                          className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring transition"
                         />
                         <input
                           name="phone"
@@ -170,11 +170,18 @@ const Contact = () => {
                           value={form.phone}
                           onChange={handleChange}
                           placeholder="Phone Number *"
-                          className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm
-                                     transition-all duration-200
-                                     focus:outline-none focus:ring-2 focus:ring-ring focus:-translate-y-0.5"
+                          className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring transition"
                         />
                       </div>
+
+                      <input
+                        name="email"
+                        type="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="Email Address"
+                        className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring transition"
+                      />
 
                       <textarea
                         name="message"
@@ -182,9 +189,7 @@ const Contact = () => {
                         value={form.message}
                         onChange={handleChange}
                         placeholder="Additional notes..."
-                        className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm
-                                   transition-all duration-200
-                                   focus:outline-none focus:ring-2 focus:ring-ring focus:-translate-y-0.5 resize-none"
+                        className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring transition resize-none"
                       />
 
                       {error && <p className="text-sm text-destructive">{error}</p>}
@@ -205,6 +210,110 @@ const Contact = () => {
               </div>
             </FadeInSection>
 
+            {/* RIGHT: Info Panel */}
+            <div className="space-y-8">
+
+              {/* Get in Touch */}
+              <FadeInSection delay={0.1}>
+                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border space-y-5">
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
+                    Get in Touch
+                  </h3>
+
+                  <a href="tel:+15628095988" className="flex items-center gap-3 group hover:text-primary transition-colors">
+                    <Phone className="w-5 h-5 text-primary" />
+                    <span>(562) 809-5988</span>
+                  </a>
+
+                  <a href="sms:5628095188" className="flex items-center gap-3 group hover:text-primary transition-colors">
+                    <MessageSquare className="w-5 h-5 text-primary" />
+                    <span>Text (562) 809-5188</span>
+                  </a>
+
+                  <div className="flex items-center gap-3">
+                    <Printer className="w-5 h-5 text-primary" />
+                    <span>Fax (562) 809-0500</span>
+                  </div>
+
+                  <a href="mailto:sjsummitdental@yahoo.com" className="flex items-center gap-3 group hover:text-primary transition-colors">
+                    <Mail className="w-5 h-5 text-primary" />
+                    <span>sjsummitdental@yahoo.com</span>
+                  </a>
+
+                  <a
+                    href="https://maps.google.com/?q=17808+S+Pioneer+Blvd+Ste+110+Artesia+CA+90701"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 group hover:text-primary transition-colors"
+                  >
+                    <MapPin className="w-5 h-5 text-primary" />
+                    <span>
+                      17808 S. Pioneer Blvd, Ste 110
+                      <br />
+                      Artesia, CA 90701
+                    </span>
+                  </a>
+                </div>
+              </FadeInSection>
+
+              {/* Office Hours */}
+              <FadeInSection delay={0.15}>
+                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="w-5 h-5 text-primary" />
+                    <h3 className="font-heading text-xl font-semibold text-foreground">
+                      Office Hours
+                    </h3>
+                  </div>
+
+                  <ul className="space-y-2">
+                    {hours.map((h) => {
+                      const today = new Date().toLocaleDateString("en-US", {
+                        weekday: "long",
+                      });
+                      const isToday = today === h.day;
+
+                      return (
+                        <li
+                          key={h.day}
+                          className={`flex justify-between items-center text-sm py-2 px-3 rounded-lg transition-all ${
+                            isToday ? "bg-primary/10" : ""
+                          }`}
+                        >
+                          <span
+                            className={`font-medium ${
+                              isToday ? "text-primary" : "text-foreground"
+                            }`}
+                          >
+                            {h.day}
+                            {isToday && (
+                              <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full">
+                                Today
+                              </span>
+                            )}
+                          </span>
+
+                          <span
+                            className={
+                              h.closed
+                                ? "text-muted-foreground"
+                                : "text-foreground"
+                            }
+                          >
+                            {h.time}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+
+                  <p className="text-xs text-muted-foreground mt-4">
+                    Walk-ins welcome during office hours.
+                  </p>
+                </div>
+              </FadeInSection>
+
+            </div>
           </div>
         </div>
       </section>
