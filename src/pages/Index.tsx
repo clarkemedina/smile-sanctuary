@@ -60,7 +60,7 @@ const Index = () => {
     <PageLayout>
 
       {/* HERO */}
-      <section className="pt-20 pb-24 lg:pt-24 lg:pb-32">
+      <section className="pt-16 pb-24 lg:pt-20 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
 
@@ -68,7 +68,7 @@ const Index = () => {
               <img
                 src={sjSummitLogo}
                 alt="SJ Summit Dental logo"
-                className="w-36 md:w-40 mb-8"
+                className="w-36 md:w-40 mb-6"
               />
 
               <h2 className="text-primary font-heading text-3xl font-semibold tracking-wide mb-2">
@@ -219,7 +219,101 @@ const Index = () => {
         </div>
       </section>
 
-      {/* YELP + CTA sections remain unchanged */}
+      {/* YELP REVIEWS */}
+      <section className="py-28 lg:py-36 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+
+          <FadeInSection>
+            <div className="text-center max-w-2xl mx-auto mb-20">
+              <p className="text-red-600 font-medium text-sm tracking-widest uppercase mb-3">
+                Yelp Reviews
+              </p>
+
+              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
+                What Our Patients Say
+              </h2>
+
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <StarRating count={5} />
+                <span className="text-muted-foreground text-sm">
+                  45+ Reviews on Yelp
+                </span>
+              </div>
+            </div>
+          </FadeInSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {reviews.map((review, i) => (
+              <FadeInSection key={review.name} delay={i * 0.08}>
+                <div className="bg-card rounded-xl p-8 border shadow-sm hover:-translate-y-2 hover:shadow-lg transition-all duration-300 h-full flex flex-col gap-4">
+                  <StarRating count={review.stars} />
+                  <p className="text-sm flex-1 leading-relaxed">
+                    "{review.text}"
+                  </p>
+                  <div className="pt-4 border-t">
+                    <p className="font-medium text-sm">{review.name}</p>
+                    <p className="text-xs text-red-600">{review.location}</p>
+                  </div>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a
+              href="https://www.yelp.com/biz/sj-summit-dental-artesia-3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-red-600 border-2 border-red-600 rounded-full px-8 py-3 hover:bg-red-600 hover:text-white transition-colors"
+            >
+              Read All Reviews on Yelp
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="py-28 lg:py-36">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+            <FadeInSection>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8">
+                We're Here When <span className="italic font-normal">You're Ready</span>
+              </h2>
+
+              <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+                Whether it's a routine cleaning or advanced treatment,
+                we guide you with care and transparency.
+              </p>
+
+              <div className="flex flex-wrap gap-6">
+                <Button variant="hero" size="lg" asChild>
+                  <Link to="/contact">
+                    Schedule Your Visit
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+
+                <Button variant="heroOutline" size="lg" asChild>
+                  <Link to="/services">View Our Services</Link>
+                </Button>
+              </div>
+            </FadeInSection>
+
+            <FadeInSection delay={0.1}>
+              <img
+                src={treatmentRoom}
+                alt="Treatment room"
+                className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
+              />
+            </FadeInSection>
+
+          </div>
+        </div>
+      </section>
 
     </PageLayout>
   );
