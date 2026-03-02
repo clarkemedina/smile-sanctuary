@@ -19,38 +19,20 @@ const reviews = [
     name: "Tes G.",
     location: "Rancho Palos Verdes, CA · via Yelp",
     stars: 5,
-    text: "Dr. Jackie and her team are awesome! She's very personable and treats you like family. She would rather ensure your well being and quality work than anything else.",
+    text: "Dr. Jackie and her team are awesome! She's very personable and treats you like family.",
   },
   {
     name: "Anna A.",
     location: "Los Angeles, CA · via Yelp",
     stars: 5,
-    text: "Dr. Jackie is very patient, takes her time with her patients and she is very accommodating with questions. If you're looking for a dentist that truly cares, you will be in good hands!",
-  },
-  {
-    name: "Maricel C.",
-    location: "Artesia, CA · via Yelp",
-    stars: 5,
-    text: "Highly recommended! I have been coming here for years. The clinic is very clean, bright and organized. Dr. Jackie is awesome — very accommodating and patient.",
-  },
-  {
-    name: "Brian",
-    location: "Artesia, CA · via Yelp",
-    stars: 5,
-    text: "I stopped going to the dentist for almost 6 years. I went to SJ Summit Dental and the staff was understanding and excellent in every way. I am very happy with my new dentist.",
-  },
-  {
-    name: "Rachelle A.",
-    location: "Torrance, CA · via Yelp",
-    stars: 5,
-    text: "I would have anxiety when I go to the dentist, but not this time around. Dr. Jackie took her time to make sure my fix was done properly without any pain.",
+    text: "Dr. Jackie is very patient, takes her time and truly cares. You will be in good hands!",
   },
 ];
 
-const StarRating = ({ count, color = "text-red-500 fill-red-500" }: { count: number; color?: string }) => (
+const StarRating = ({ count }: { count: number }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: count }).map((_, i) => (
-      <Star key={i} className={`w-3.5 h-3.5 ${color}`} />
+      <Star key={i} className="w-4 h-4 text-red-500 fill-red-500" />
     ))}
   </div>
 );
@@ -58,94 +40,104 @@ const StarRating = ({ count, color = "text-red-500 fill-red-500" }: { count: num
 const Index = () => {
   return (
     <PageLayout>
-      {/* Hero */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* HERO */}
+      <section className="py-28 lg:py-36">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+            {/* LEFT SIDE */}
             <FadeInSection>
               <img
                 src={sjSummitLogo}
                 alt="SJ Summit Dental logo"
-                className="w-32 h-32 mb-6"
+                className="w-36 md:w-40 mb-8"
               />
-              <h2 className="text-primary font-heading text-2xl font-bold tracking-wide mb-1">
+
+              <h2 className="text-primary font-heading text-3xl font-semibold tracking-wide mb-2">
                 SJ SUMMIT DENTAL
               </h2>
-              <p className="text-muted-foreground italic mb-6">
+
+              <p className="text-muted-foreground italic mb-8 text-lg">
                 Your Smile Shines Because We Care
               </p>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-4">
+
+              <h1 className="font-heading text-6xl md:text-7xl lg:text-[4.5rem] font-bold leading-[1.05] text-foreground">
                 Modern Dentistry.
               </h1>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.1] mb-8">
+
+              <h1 className="font-heading text-6xl md:text-7xl lg:text-[4.5rem] font-bold leading-[1.05] text-primary mb-10">
                 Family Care.
               </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-md">
-                Serving our community since 2009 with gentle, trusted
-                dental care. Your comfort is our priority.
+
+              <p className="text-muted-foreground text-xl leading-relaxed mb-12 max-w-lg">
+                Serving our community since 2009 with gentle, trusted dental care.
+                Your comfort is our priority.
               </p>
-              <div className="flex flex-wrap gap-4">
+
+              <div className="flex flex-wrap gap-5">
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/contact">
                     Schedule Your Visit
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
+
                 <Button variant="heroOutline" size="lg" asChild>
                   <Link to="/about">Meet Our Doctors</Link>
                 </Button>
               </div>
             </FadeInSection>
 
+            {/* RIGHT SIDE IMAGE */}
             <FadeInSection delay={0.15}>
               <div className="relative">
                 <img
                   src={doctorsPortrait}
                   alt="Dr. Jackie and Dr. Gerimae — SJ Summit Dental"
-                  className="rounded-lg shadow-2xl w-full object-cover object-top aspect-[4/5]"
+                  className="rounded-2xl shadow-2xl w-full object-cover object-top aspect-[4/5]"
                 />
               </div>
             </FadeInSection>
+
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24 lg:py-32 bg-secondary">
-        <div className="container mx-auto px-4 lg:px-8">
+      {/* WHY CHOOSE US */}
+      <section className="py-28 lg:py-36 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <FadeInSection>
-            <div className="text-center max-w-xl mx-auto mb-16">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-5">
+            <div className="text-center max-w-2xl mx-auto mb-20">
+              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
                 Why Families Choose Us
               </h2>
               <p className="text-muted-foreground text-lg">
-                We're here to care for your smile — with expertise, warmth, and modern technology.
+                Expertise, warmth, and modern dental care in one place.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {[
               {
                 title: "Advanced Technology",
-                desc: "Digital X-rays, panoramic imaging, and modern equipment for precise, comfortable care.",
+                desc: "Digital imaging and modern equipment for precise, comfortable care.",
               },
               {
                 title: "Comfort-First Care",
-                desc: "Gentle techniques and a calming environment designed to ease every visit.",
+                desc: "Gentle techniques in a calming environment.",
               },
               {
                 title: "Family-Owned Since 2009",
-                desc: "A mother-daughter dental team dedicated to treating every patient like family.",
+                desc: "A mother-daughter team dedicated to treating patients like family.",
               },
             ].map((pillar, i) => (
               <FadeInSection key={pillar.title} delay={i * 0.1}>
-                <div className="bg-card rounded-lg p-8 shadow-sm border border-border hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                  <div className="w-8 h-0.5 bg-accent mb-6" />
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                <div className="bg-card rounded-xl p-10 shadow-sm border hover:shadow-lg transition-all duration-300">
+                  <h3 className="font-heading text-2xl font-semibold mb-4">
                     {pillar.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-base leading-relaxed">
                     {pillar.desc}
                   </p>
                 </div>
@@ -155,129 +147,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Comfort Section */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* FINAL CTA */}
+      <section className="py-28 lg:py-36">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
             <FadeInSection>
-              <img
-                src={receptionDesk}
-                alt="Reception area at SJ Summit Dental"
-                className="rounded-lg shadow-lg w-full object-cover aspect-[4/3]"
-              />
-            </FadeInSection>
-            <FadeInSection delay={0.1}>
-              <p className="text-accent font-medium text-sm tracking-widest uppercase mb-4">Our Environment</p>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Designed for{" "}
-                <span className="italic font-normal">Your Ease</span>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8">
+                We're Here When <span className="italic font-normal">You're Ready</span>
               </h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                From our welcoming reception to our nature-themed treatment rooms, every detail
-                is crafted with your comfort in mind. We understand dental anxiety and go above
-                and beyond to make your visit effortless.
+
+              <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+                Whether it's a routine cleaning or advanced treatment,
+                we guide you with care and transparency.
               </p>
-              <ul className="space-y-3 mb-8">
-                {["Walk-ins welcome", "Multilingual: English, Español, Filipino", "Most insurance plans accepted"].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-foreground">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="heroOutline" asChild>
-                <Link to="/insurance">Insurance & Payment Info</Link>
-              </Button>
-            </FadeInSection>
-          </div>
-        </div>
-      </section>
 
-      {/* Reviews */}
-      <section className="py-24 lg:py-32 bg-secondary">
-        <div className="container mx-auto px-4 lg:px-8">
-          <FadeInSection>
-            <div className="text-center max-w-xl mx-auto mb-16">
-              <p className="text-red-600 font-medium text-sm tracking-widest uppercase mb-2">Yelp Reviews</p>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-5">
-                What Our Patients Say
-              </h2>
-              <div className="flex items-center justify-center gap-2 mb-3">
-                <StarRating count={5} />
-                <span className="text-muted-foreground text-sm">45+ reviews on Yelp</span>
-              </div>
-              <p className="text-muted-foreground">Real words from real patients who've trusted us with their smiles.</p>
-            </div>
-          </FadeInSection>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            {reviews.map((review, i) => (
-              <FadeInSection key={review.name} delay={i * 0.07}>
-                <div className="bg-card rounded-lg p-6 border border-border flex flex-col gap-4 h-full">
-                  <StarRating count={review.stars} />
-                  <p className="text-foreground text-sm leading-relaxed flex-1">
-                    "{review.text}"
-                  </p>
-                  <div className="pt-3 border-t border-border">
-                    <p className="font-medium text-sm text-foreground">{review.name}</p>
-                    <p className="text-xs text-red-600">{review.location}</p>
-                  </div>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-
-          <FadeInSection delay={0.1}>
-            <div className="text-center">
-              <a
-                href="https://www.yelp.com/biz/sj-summit-dental-artesia-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-red-600 border-2 border-red-600 rounded-full px-6 py-2.5 hover:bg-red-600 hover:text-white transition-colors"
-              >
-                Read All Reviews on Yelp
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <FadeInSection>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                We're Here When{" "}
-                <span className="italic font-normal">You're Ready</span>
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Whether it's a routine cleaning, cosmetic enhancement, or advanced restorative work —
-                we guide you with care, transparency, and respect.
-              </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-5">
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/contact">
                     Schedule Your Visit
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
+
                 <Button variant="heroOutline" size="lg" asChild>
                   <Link to="/services">View Our Services</Link>
                 </Button>
               </div>
             </FadeInSection>
+
             <FadeInSection delay={0.1}>
               <img
                 src={treatmentRoom}
-                alt="Treatment room at SJ Summit Dental"
-                className="rounded-lg shadow-lg w-full object-cover aspect-[4/3]"
+                alt="Treatment room"
+                className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
               />
             </FadeInSection>
+
           </div>
         </div>
       </section>
+
     </PageLayout>
   );
 };
